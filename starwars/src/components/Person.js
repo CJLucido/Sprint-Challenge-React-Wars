@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import styled from "styled-components";
 
 const StyledPerson = styled.div`
-background-color: white;
+    background-color: white;
     border-radius: 22px;
     width: 25%;
 
@@ -15,6 +15,7 @@ background-color: white;
 function Person(props) {
 
     return(
+        
         <StyledPerson>
             <h2>{props.character}</h2>
             <p>{props.birth_year}</p>
@@ -22,6 +23,7 @@ function Person(props) {
             <p>{props.height}</p>
             <p>{props.mass}</p>
         </StyledPerson>
+        
 
     )
 

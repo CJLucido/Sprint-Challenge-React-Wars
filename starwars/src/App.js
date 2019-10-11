@@ -25,17 +25,21 @@ const StyledApp = styled.div`
   const [hair_color, setHairColor] = useState(1);
   const [height, setHeight] = useState(1);
   const [mass, setMass] = useState(1);
-
+  
+  function useFetchChar(){
+    const [peopleList, setPeopleList] = useState([]);
+      useEffect(() => {
+      axios.get(`https://swapi.co/api/people/`)
+      .then(response => {
+        console.log(response)
+        setPeopleList(response.data.results)
+      });
+      }, []);
+      return peopleList;
+    }
+    const newInfo = useFetchChar();
 
   useEffect(() => {
-    // const fetchCharacter = (id) => 
-    // fetch(`https://swapi.co/api/people/1/`)
-    // .then(response => response.json())
-    // .then(item => {
-    //   console.log(item)
-    //   setCharacter(item.name)
-    // })
-
     
     axios.get(`https://swapi.co/api/people/1/`)
     .then(response => {
@@ -57,7 +61,9 @@ const StyledApp = styled.div`
     .then(response => {
       let pathChar = response.data.url;
     })
- 
+
+
+
 
   return (
     <div className="App">
