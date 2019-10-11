@@ -26,13 +26,24 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React JS is a UI library and NOT a framework according to the TK videos, because it doesn't give opinions on how files should be organized or how data should look (Week1D1V1). It tries to solve the problem of writing JS components that can deal with the complex state a user is dealing with. It aslo makes scaling web applications easier. It uses a virtual DOM that shows a complete picture of the rerendered DOM to react, and then just takes the changes. It can also manage state inside components.
+
 - [ ] What does it mean to _think_ in react?
+
+Thinking in react has a few elements: making code reusable, DRY, compartmentalized, and structured. This is because state, properties(functions or variables), and components can accessed by completely different files, structure is important because of this ability to compartmentalize and reuse. The DRYness comes from the ability to write components that are generalized enough that they are not App specific. 
 
 - [ ] Describe state.
 
+State in react is what the value of an array is on the DOM, that array being a variable we can use later as a property or for JSX input. State is instantiated with a default and then manipulated/mutated with functions.
+
 - [ ] Describe props.
 
+Props are properties that can be passed down or changed in other (child) components. Not all props requires state, and prop syntax in JSX is similar to attribute syntax in HTML except we replace quotaion marks with curly braces.
+
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+Side effects are imperative logic that happen right after an iteration of the react function, useEffect ensures that the effect wont happen until after react finishes rendering to the DOM. To sync side effects with state or props we have to associate side effects with certain changes in the data that powers a given component. One way we can do this is by setting a prop to be watched by a useEffect (in it's second [] argument).
 
 ## Project Set Up
 
