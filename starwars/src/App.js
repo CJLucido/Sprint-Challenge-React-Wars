@@ -11,7 +11,8 @@ const StyledApp = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 5%
+    margin: 5%;
+    justify-content: center
 
 `
   // Try to think through what state you'll need for this app before starting. Then build out

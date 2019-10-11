@@ -2,10 +2,11 @@ import React from "react";
 import styled from "../../../starwars/node_modules/styled-components";
 
 const StyledPerson = styled.div`
-    background-color: white;
+    background-color: rgba(255, 151, 19, .2);
     border-radius: 22px;
     width: 25%;
-    opacity: 25%
+    margin-bottom: 2%;
+    margin-right: 2%
 
 
 `
