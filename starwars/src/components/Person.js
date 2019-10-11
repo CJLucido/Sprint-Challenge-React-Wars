@@ -1,11 +1,11 @@
-import React, {useState} from "react";
-import styled from "styled-components";
+import React from "react";
+import styled from "../../../starwars/node_modules/styled-components";
 
 const StyledPerson = styled.div`
     background-color: white;
     border-radius: 22px;
     width: 25%;
-
+    opacity: 25%
 
 
 `
